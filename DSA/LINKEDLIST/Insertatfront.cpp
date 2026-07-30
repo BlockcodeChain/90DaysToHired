@@ -14,18 +14,25 @@ public:
 
 int main(){
      
-
-    Node* Head;
+int arr[]={1,2,3,4,5,6};
+int size= sizeof(arr)/sizeof(arr[0]);
+    Node* Head=NULL;
+    for(int i=0;i<size;i++){
     if(Head==NULL){
-        Head=new Node(28);
+        Head=new Node(arr[i]);
     }
     else {
         Node* temp;
-        temp =new Node(50);
+        temp =new Node(arr[i]);
         temp->next=Head;
         Head=temp;
     }
-      cout<<temp->value<<" ";
+}
+     Node* temp=Head;
+     while(temp){
+       cout<<temp->value<<" ";
+       temp=temp->next;
+     }
 
   
 
